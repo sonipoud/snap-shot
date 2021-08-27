@@ -28,15 +28,18 @@ function App() {
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
       ></Nav>
-      {!contactSelected ? (
-        <>
-          <Gallery currentCategory={currentCategory}></Gallery>
-          <About></About>
-        </>
-      ) : (
-        <ContactForm></ContactForm>
-      )}
+      <main>
+        {!contactSelected ? (
+          <>
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+          </>
+        ) : (
+          <ContactForm></ContactForm>
+        )}
+      </main>
     </div>
+
   );
 }
 
